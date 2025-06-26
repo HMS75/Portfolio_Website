@@ -1,0 +1,411 @@
+/* Tablet screens (768px and below) */
+@media only screen and (max-width: 768px) {
+  nav a {
+    position: static;
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .i2 {
+    height: 200px;
+  }
+  
+  .container2 {
+    display: block;
+  }
+
+  .container2 > * {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .one, .two {
+    width: 100%;
+  }
+
+  .quote-carousel {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 5px;
+    margin: 10px;
+  }
+
+  .quote {
+    font-size: 0.95rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+  }
+}
+
+
+body {
+    background-color: rgb(138, 138, 248);
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-family: "EB Garamond", cursive;
+    font-size: larger;
+}  
+
+footer {
+    background-color: beige;
+    border-radius: 15px;
+    width: 88%;
+}
+
+nav a {
+    padding: 14px 20px;
+    color: blue;
+    text-decoration: none;
+}
+nav a:hover {
+    color: blueviolet;
+}
+
+
+.name {
+    position: relative;
+    float: left;
+}
+
+.contact {
+    position: relative;
+    float: right;
+}
+
+.projects {
+    position: relative;
+    float: right;
+}
+
+.about {
+    float: right;
+    position: relative;
+}
+
+.container {
+    background-color: beige;
+    border-radius: 15px;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.container2 {
+    display: table;
+    width: 100%;
+}
+
+.container2 > * {
+    display: table-cell;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 50%;
+    padding: 15px;
+    margin: 10px;
+}
+
+.one {
+    background-color: beige;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19);
+    width: 50%;
+}
+.two {
+    background-color: beige;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19);
+    width: 50%;
+}
+
+.i1 {
+    transform: rotate(-6deg);
+}  
+
+.i4 {
+    transform: rotate(-90deg);
+}
+
+
+.spacer {
+    height: 80px;
+}
+
+
+.icons img {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.icons img:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+/* Container2 - Responsive and Animated */
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background-color: beige;
+  border-radius: 20px;
+  padding: 40px 20px;
+  transition: all 0.3s ease-in-out;
+
+  background: linear-gradient(270deg, #fdf6e3, #f5f5dc);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Card with animation on hover */
+.card {
+  background: linear-gradient(145deg, #ffffff, #f3f3f3);
+  border-radius: 20px;
+  padding: 25px;
+  width: 42%;
+  min-width: 280px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #f0f8ff, #ffffff);
+}
+
+/* Optional: Add a subtle animation inside headings or lists */
+.card h3, .card h4, .card ul, .card p {
+  transition: color 0.3s ease;
+}
+
+.card:hover h3, 
+.card:hover h4 {
+  color: #3a00c3;
+}
+
+.card:hover ul li::marker {
+  color: #7950f2;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+  }
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.container3 {
+  background-color: beige;
+  align-items: center;
+  border-radius: 15px;
+  width: 70%;
+}
+
+.quote-carousel {
+      max-width: 600px;
+      text-align: center;
+      position: relative;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+.quote {
+    display: none;
+    font-size: 1.2rem;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    }
+
+    input#quote1:checked ~ .quotes .q1,
+    input#quote2:checked ~ .quotes .q2,
+    input#quote3:checked ~ .quotes .q3 {
+      display: block;
+      opacity: 1;
+    }
+
+.dots {
+      margin-top: 20px;
+    }
+
+.dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 6px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    input#quote1:checked ~ .dots label[for="quote1"],
+    input#quote2:checked ~ .dots label[for="quote2"],
+    input#quote3:checked ~ .dots label[for="quote3"] {
+      background-color: #555;
+    }
+.dot:hover {
+  background-color: #666;
+}
+
+
+/* Contact Container Layout */
+.container4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  background: beige;
+  border-radius: 16px;
+  max-width: 1200px;
+ 
+  animation: fadeInUp 1s ease-out both;
+  width: 70%;
+}
+
+/* Contact Details Section */
+.details {
+  flex: 1;
+  min-width: 250px;
+  max-width: 200px;
+  padding: 20px;
+  padding-left: 90px;
+  padding-right: 20px;
+  margin-top: 40px;
+}
+
+.details h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 24px;
+  color: #333;
+}
+
+.details p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Contact Form Section */
+.form {
+  flex: 2;
+  min-width: 300px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.form h3,
+.form h4 {
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.form-item {
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-item:focus {
+  outline: none;
+  border-color: #7950f2;
+  box-shadow: 0 0 5px rgba(121, 80, 242, 0.4);
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 10px 25px;
+  background-color: #7950f2;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #5a35c5;
+  transform: scale(1.05);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-item {
+    width: 100%;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+}
+
+/* Scroll Up Button */
+#scrollUpBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgb(243, 210, 165);
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollUpBtn:hover {
+  background-color: #5f3dc4;
+  transform: scale(1.1);
+}
